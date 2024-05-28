@@ -16,11 +16,11 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 driver = webdriver.Chrome(options=options)
 
-# Verifica se o arquivo 'teste_produtos.xlsx' existe e excluí-lo se existir
-file_path = os.path.join(os.path.dirname(__file__), 'teste_produtos.xlsx')
+# Verifica se o arquivo 'Ceasa-Produtos.xlsx' existe e excluí-lo se existir
+file_path = os.path.join(os.path.dirname(__file__), 'Ceasa-Produtos.xlsx')
 if os.path.exists(file_path):
     os.remove(file_path)
-    print("Arquivo teste_produtos.xlsx existente excluído.")
+    print("Arquivo Ceasa-Produtos.xlsx existente excluído.")
     
 # Variavél que armazena a data atual
 now = datetime.now()
@@ -132,7 +132,7 @@ def extract_principais_produtos(Link, months):
 df_main = extract_principais_produtos(Link, months)
 
 # Variável filename2 guarda o valor com o nome que será dado ao arquivo xlsx 
-filename = 'teste_produtos.xlsx'
+filename = 'Ceasa-Produtos.xlsx'
 #
 
 # Obtém o caminho do diretório atual
@@ -142,7 +142,7 @@ current_dir = os.getcwd()
 ceasa_ce_path = os.path.join(current_dir, 'CeasaCe')
 
 # Constroi o caminho completo para o arquivo
-file_path = os.path.join(ceasa_ce_path, 'teste_produtos.xlsx')
+file_path = os.path.join(ceasa_ce_path, 'Ceasa-Produtos.xlsx')
 
 # Criar o arquivo xlsx passando os parâmetros de nome do arquivo (que esta salvo na variavel filename2)
 
